@@ -111,7 +111,7 @@
                 <ul>
                     <li><a href="https://github.com/Minds-On-Design-Lab/giving-impact/issues" target="_blank">Report a bug</a></li>
                     <li><a href="https://github.com/Minds-On-Design-Lab/giving-impact" target="_blank">Check for new releases</a></li>
-                    <li><a href="https://github.com/Minds-On-Design-Lab/giving-impact/wiki" target="_blank">Read the docs</a></li>
+                    <li><a href="https://github.com/Minds-On-Design-Lab/Giving-Impact-API" target="_blank">Read the docs</a></li>
                 </ul>
             </div>
         </div>
