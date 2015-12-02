@@ -1,7 +1,12 @@
-Giving Impact
-=============
+# Giving Impact™ - Online Fundraising for Stripe
 
-Giving Impact is copyright Minds on Design Lab, Inc. and licensed under The MIT License (MIT).
+Giving Impact™ is an open source solution designed to build on the fantastic Stripe payment processing platform to provide you with the tools to build your own online fundraising platform for your nonprofit/charity.
+
+Our suite of tools includes a fantastic dashboard for managing fundraising initiatives and an API that allows web development resources to create rich donation experiences more efficiently.
+
+We've designed our API for a **refreshingly simple and customizable** experience. If you are brand new to Giving Impact, we'd recommend giving our [general introduction docs](https://github.com/Minds-On-Design-Lab/Giving-Impact-API) a read. For those ready to get to integrating, please, engage!
+
+Giving Impact is copyright Minds on Design Lab, Inc. and licensed under The MIT License (MIT)
 
 INSTALL
 =======
