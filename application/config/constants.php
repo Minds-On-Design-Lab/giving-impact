@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-define('_GI_VER', '20151104-[oss]');
+define('_GI_VER', '20151201001');
 
 /*
 |--------------------------------------------------------------------------
