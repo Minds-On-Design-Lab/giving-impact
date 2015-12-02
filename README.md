@@ -1,7 +1,7 @@
 Giving Impact
 =============
 
-Giving Impact is copyright Minds on Design Lab, Inc. and licensed under XXXX.
+Giving Impact is copyright Minds on Design Lab, Inc. and licensed under The MIT License (MIT).
 
 INSTALL
 =======
