@@ -1,0 +1,4 @@
+{
+	"error": false,
+	"supporter": <?php echo json_encode($supporter) ?>
+}

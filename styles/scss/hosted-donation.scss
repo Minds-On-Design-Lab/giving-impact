@@ -1,0 +1,306 @@
+// imports
+	@import "app", "library/fa/font-awesome", "library/_screensizes";
+
+
+// Variables
+	$fontsize: 14px;
+	$fontsizemeta: 12px;
+	$gifontfamily: arial, sans-serif;
+	$orange: #F7941E;
+	$blue: #25AAE1;
+	$lightblue: #a8ddf3;
+	$grayborder: #d0d0d0;
+	$darkgray: #4c4c4c;
+	$medgray: #e2e1d7;
+	$lightgray: #e3e3e3;
+	$white: #fff;
+
+// Tools
+	@mixin clearfix() {
+		&:before,
+		&:after {
+			content: " ";
+			display: table;
+			clear:both;
+		}
+	}
+
+	@mixin transition2($transition, $transition2) {
+		-webkit-transition: $transition, $transition2;
+		-moz-transition: $transition, $transition2;
+		-o-transition: $transition, $transition2;
+		transition: $transition, $transition2;
+	}
+
+	input[type=submit] {
+		@include button(
+		// $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+		0,
+		// Primary color set in settings file. Default: $primary-color.
+		$darkgray,
+		// If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+		false
+		// We can set $full-width:true to remove side padding extend width. Default:false
+		false,
+		// We can set $disabled:true to create a disabled transparent button. Default:false
+		false,
+		// $is-input - <input>s and <button>s take on strange padding. We added this to help fix that. Default:false
+		true
+		);
+		border: #d0cfcf 2px solid;
+		color: $white;
+		font-family: $gifontfamily;
+		font-size: rem-calc(16px);
+		padding: 10px 30px;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #d0cfcf;
+			color: $darkgray;
+		}
+
+	}
+/* General */
+
+	.clearfix {@include clearfix;}
+
+	body {
+		font-family: $gifontfamily;
+		color: $darkgray;
+		font-size: $fontsize;
+		}
+	a {text-decoration: none;}
+	a:hover {text-decoration: none;}
+	p {
+		font-family: $gifontfamily;
+		font-size: $fontsize;
+		line-height: rem-calc(18px);
+	}
+	.main {
+		margin-top: 70px;
+		@media #{$medium-up} {
+			background-image: url('/assets/images/bkg-hosted.png');
+			background-repeat: repeat-x;
+			background-position: 0 rem-calc(200px);
+		}
+		@media #{$small-only} {
+			background-color: #f5f5ee;
+			margin-top: 0;
+		}
+	}
+	small {
+		font-style: italic;
+	}
+
+/* Developer */
+.sandbox-alert {
+    text-align: center;
+    background-color: $orange;
+    padding: 5px;
+    color: $darkgray;
+    font-weight: bold;
+}
+
+// Security
+
+.security {
+	padding: 10px 0;
+	border-bottom: $grayborder 1px solid;
+	color: $darkgray;
+	img {
+		width: 120px;
+		margin-top: -3px;
+	}
+	.security-detail {
+		@media #{$small-only} {
+			display: none;
+		}
+	}
+}
+/* Utils */
+    .right {
+        text-align: right;
+    }
+    .box {
+				padding: 16px 20px 25px 20px;
+        clear: both;
+
+				&.campaign {
+					background-color: $medgray;
+
+
+					@media #{$medium-up} {
+						min-height: 670px;
+						margin-left: 20px;
+					}
+
+					.description > p {
+						font-size: rem-calc(18px);
+						line-height: rem-calc(24px);
+					}
+
+					ul > li {
+						font-size: rem-calc(18px);
+						border-top: #f3f3f3 1px solid;
+						padding: 20px 0;
+
+						strong {
+							font-size: rem-calc(24px);
+						}
+					}
+				}
+
+				&.donation {
+					padding-top: rem-calc(35px);
+				}
+
+        h4, label.donation-field {
+            font-size: rem-calc(21px);
+						line-height: rem-calc(32px);
+						font-weight: bold;
+            margin: 0;
+            padding: 0;
+						color: #52514b;
+        }
+
+				h4 {
+					margin-bottom: 40px;
+				}
+    }
+
+		.checkout-start {
+			margin-top: 45px;
+		}
+
+		.box.checkout {
+			margin-top: -20px;
+			padding-top: 0;
+		}
+
+		div.amount {
+			background-color: $medgray;
+			margin-bottom: 35px;
+
+			ul > li {
+				font-size: rem-calc(18px);
+				border-top: #f3f3f3 1px solid;
+				padding: 25px;
+
+				strong {
+					font-size: rem-calc(24px);
+				}
+			}
+		}
+
+    ul.unstyled {
+        margin-left: 0;
+				margin-bottom: 0;
+
+        li {
+          list-style-type: none;
+					font-size: $fontsize;
+        }
+    }
+    .share-box {
+        border: 1px solid #c2c2c2;
+        padding: 10px;
+        margin-bottom: 17px;
+    }
+
+/* Images and Video */
+
+    .campaign-thumb {
+        float: left;
+				width: 100%;
+				margin-bottom: rem-calc(15px);
+    }
+
+/* Header */
+    header {
+        margin-bottom: 0;
+				padding: 0 20px;
+
+				height: 175px;
+				@media #{$small-only} {
+					background-color: $white;
+
+				}
+        h1 {
+            color: $darkgray;
+						font-family: $gifontfamily;
+						font-weight: normal;
+						text-align: left;
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: rem-calc(28px);
+            line-height: rem-calc(36px);
+            padding: 0 15px 10px 0;
+						@media #{$small-only} {
+							font-size: rem-calc(20px);
+							line-height: rem-calc(26px);
+							text-align: center;
+							padding: 0 10px;
+						}
+        }
+
+				.logo {
+					text-align: left;
+					max-height: 75px;
+					margin-bottom: 30px;
+					@media #{$small-only} {
+						text-align: center;
+					}
+				}
+
+				img.org-logo {
+					margin: 20px 0;
+					max-height: 75px;
+				}
+    }
+
+/* Forms */
+    form {
+
+        input[type="text"] {
+            margin-top: 8px;
+        }
+
+        select {
+            margin: 12px 0 20px 0;
+        }
+
+        input[name="additional_donation"], input[name="donation_amount"] {
+            margin-top: 0;
+        }
+
+        footer {
+            margin: 0;
+            padding: 15px 0;
+            border-top: 3px solid #fff;
+        }
+
+        label {
+            font-weight: bold;
+						margin-bottom: 0;
+        }
+
+        .additional_donation_text {
+            position: relative;
+            top: -10px;
+            font-weight: normal;
+        }
+    }
+    .error.hide {display: none;}
+
+		span.error, small.error {
+			margin-top: -16px;
+		}
+
+    .additional_donation_container {
+        small {
+            font-size: 12px;
+            position: relative;
+            top: -10px;
+            left: 2px;
+        }
+    }

@@ -1,0 +1,4 @@
+{
+	"error": false,
+	"donations": <?php echo json_encode($donations) ?>
+}

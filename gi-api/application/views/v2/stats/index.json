@@ -1,0 +1,4 @@
+{
+	"error": false,
+	"stats": <?php echo json_encode($stats) ?>
+}

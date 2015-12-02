@@ -1,0 +1,46 @@
+// Tables
+table {
+  border: none;
+  border-spacing: 0;
+  width: 100%;
+  }
+table thead {
+  background: none;
+  }
+table thead tr th {
+  border-bottom: 2px solid #25AAE1;
+  padding: 5px 0;
+  color: $blue;
+  @media only screen and (max-width: 767px) {
+    font-size: 1.1rem;
+  }
+}
+table tbody tr:nth-child(even) {
+  background: none;
+  }
+table tbody tr:nth-child(odd) {
+  background: none;
+  }
+table tbody tr td {
+  border-bottom: 1px solid #DBDBDB;
+  padding: 10px 10px 10px 0;
+  color: $medgrey;
+  font-size: rem-calc(14);
+
+  i.icon {
+    @media only screen and (max-width: 767px) {
+    font-size: 1.1rem;
+  }
+  }
+}
+td.width10 {width: 10%;}
+td.width15 {width: 15%;}
+td.width20 {width: 20%;}
+td.width25 {width: 25%;}
+td.width30 {width: 30%;}
+td.width35 {width: 35%;}
+td.width40 {width: 40%;}
+td.width50 {width: 40%;}
+td.center {text-align: center;}
+
+#pagination {height: 1em;}

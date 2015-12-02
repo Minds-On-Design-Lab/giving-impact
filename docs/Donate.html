@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Donate | Giving Impact</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Donate" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Giving Impact</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Donate</h1>
+    </div>
+
+    <p>    class
+    <strong>Donate</strong>        extends <abbr title="CI_Controller">CI_Controller</abbr>
+</p>
+
+            <div class="description">
+            <p>Donate controller</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_index">index</a>()
+                                            <p>Index action</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkout">checkout</a>($charge_error = false)
+                                            <p>Checkout handler presents the user with the checkout form</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_process">process</a>()
+                                            <p>Donation process handler. This is a URL callback that processes
+the donation, sends the request to the Stripe API and records
+the result. A successful donation will send the user to
+donate/XXXXX/complete, a failure will send the user back to the
+donation form.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_complete">complete</a>()
+                                            <p>Complete donation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_contact">contact</a>()
+                                            <p>Contact is an Ajax callback only. It exists to record if a user wishes
+to be contacted by the org or not. Accepts the donation HASH as the 2nd
+URL segment and 'contact' as a BOOLEAN as a POST parameter.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 12</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">at line 91</div>
+        <code>                    
+    
+    <strong>index</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Index action</p>                    <p>Loads 'donate/index' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>is_opportunity Boolean</li>
+<li>account Account_model</li>
+<li>hash String</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkout">
+        <div class="location">at line 142</div>
+        <code>                    
+    
+    <strong>checkout</strong>($charge_error = false)</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Checkout handler presents the user with the checkout form</p>                    <p>Loads 'donation/checkout' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>is_opportunity Boolean</li>
+<li>account Account_model</li>
+<li>hash String</li>
+<li>donation_level Object</li>
+<li>additional_donation Float</li>
+<li>donation_amount Float</li>
+<li>donation_total Float</li>
+<li>responses Array</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$charge_error</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_process">
+        <div class="location">at line 278</div>
+        <code>                    
+    
+    <strong>process</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Donation process handler. This is a URL callback that processes
+the donation, sends the request to the Stripe API and records
+the result. A successful donation will send the user to
+donate/XXXXX/complete, a failure will send the user back to the
+donation form.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_complete">
+        <div class="location">at line 491</div>
+        <code>                    
+    
+    <strong>complete</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Complete donation.</p>                    <p>Loads 'donation/complete' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>is_opportunity Boolean</li>
+<li>acount Account_model</li>
+<li>donation Donation_model</li>
+<li>share_url String</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_contact">
+        <div class="location">at line 532</div>
+        <code>                    
+    
+    <strong>contact</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Contact is an Ajax callback only. It exists to record if a user wishes
+to be contacted by the org or not. Accepts the donation HASH as the 2nd
+URL segment and 'contact' as a BOOLEAN as a POST parameter.</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);  //641.008 - 1024px hi 
+$large-range: (64.063em, 90em);
+$xlarge-range: (90.063em, 120em);
+$xxlarge-range: (120.063em);
+
+// Small Screens
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+// Medium Screens
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+$medium-down: "#{$screen} and (max-width:#{upper-bound($medium-range)})";
+
+// Large Screens
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+$xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+$xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+$xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+$xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+// Retina Screens
+$retina-screen:       "only screen and (-webkit-min-device-pixel-ratio: 2),
+                      only screen and (min--moz-device-pixel-ratio: 2),
+                      only screen and (-moz-min-device-pixel-ratio: 2),
+                      only screen and (-o-min-device-pixel-ratio: 2/1),
+                      only screen and (min-device-pixel-ratio: 2),
+                      only screen and (min-resolution: 192dpi),
+                      only screen and (min-resolution: 2dppx)";
+
+// Topbar Breakpoint
+$topbar-breakpoint: #{upper-bound($medium-range)};
+$small-topbar-only: "only screen and (max-width: #{upper-bound($medium-range)})";
+$large-topbar-only: "only screen and (min-width: #{lower-bound($large-range)})";
+
+// Orientation
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>MODL\GivingImpact\Model\Campaign | Giving Impact API</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Giving Impact API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../MODL/GivingImpact/Model.html">MODL\GivingImpact\Model</a>\Campaign</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Campaign</strong>        extends <a href="../../../MODL/GivingImpact/Model.html"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></p>
+
+            <div class="description">
+            <p>Campaign model</p>
+            <p>Campaign model provides a fluent interface<br />
+<br />
+  &lt;pre&gt;<br />
+      $campaigns = $API<br />
+          -&gt;campaign<br />
+          -&gt;status(&#039;active&#039;)<br />
+          -&gt;limit(10)<br />
+          -&gt;fetch();<br />
+  &lt;/pre&gt;</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_id_token">
+                                                            
+                </td>
+                <td>$id_token</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_title">
+                                                            
+                </td>
+                <td>$title</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_description">
+                                                            
+                </td>
+                <td>$description</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_youtube_id">
+                                                            
+                </td>
+                <td>$youtube_id</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_donation_total">
+                                                            
+                </td>
+                <td>$donation_total</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_donation_target">
+                                                            
+                </td>
+                <td>$donation_target</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_donation_url">
+                                                            
+                </td>
+                <td>$donation_url</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_share_url">
+                                                            
+                </td>
+                <td>$share_url</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shares_fb">
+                                                            
+                </td>
+                <td>$shares_fb</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shares_twitter">
+                                                            
+                </td>
+                <td>$shares_twitter</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hash_tag">
+                                                            
+                </td>
+                <td>$hash_tag</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_status">
+                                                            
+                </td>
+                <td>$status</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_has_giving_opportunities">
+                                                            
+                </td>
+                <td>$has_giving_opportunities</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_display_donation_target">
+                                                            
+                </td>
+                <td>$display_donation_target</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_display_donation_total">
+                                                            
+                </td>
+                <td>$display_donation_total</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_enable_donation_levels">
+                                                            
+                </td>
+                <td>$enable_donation_levels</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_donation_levels">
+                                                            
+                </td>
+                <td>$donation_levels</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_image_url">
+                                                            
+                </td>
+                <td>$image_url</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_custom_fields">
+                                                            
+                </td>
+                <td>$custom_fields</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_campaign_fields">
+                                                            
+                </td>
+                <td>$campaign_fields</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_widget">
+                                                            
+                </td>
+                <td>$widget</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_header_font_color">
+                                                            
+                </td>
+                <td>$header_font_color</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_campaign_color">
+                                                            
+                </td>
+                <td>$campaign_color</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_donation_minimum">
+                                                            
+                </td>
+                <td>$donation_minimum</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_analytics_id">
+                                                            
+                </td>
+                <td>$analytics_id</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_receipt">
+                                                            
+                </td>
+                <td>$receipt</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_image_type">
+                                                            
+                </td>
+                <td>$image_type</td>
+                <td class="last"></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_image_file">
+                                                            
+                </td>
+                <td>$image_file</td>
+                <td class="last"></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method_publicProperties">publicProperties</a>()
+                    <p>Return an array of public properties</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_publicProperties"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_assign">assign</a>(Object $obj)
+                    <p>Assign one object&#039;s properties into a new object model</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_assign"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method_fetch">fetch</a>(boolean $token = false)
+                    <p>Fetch campaigns via api</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_related">related</a>(String $related)
+                    <p>Set the related property</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_related"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_limit">limit</a>(Int $lim)
+                    <p>Set limit property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_limit"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_offset">offset</a>(Int $os)
+                    <p>Set offset property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_offset"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_sort">sort</a>(String $order)
+                    <p>Set sort property.</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_sort"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_status">status</a>(String $status)
+                    <p>Status property</p>
+                </td>
+                <td><small>from&nbsp;<a href="../../../MODL/GivingImpact/Model.html#method_status"><abbr title="MODL\GivingImpact\Model">Model</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($c, $data = false)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_create">create</a>(Array $data)
+                    <p>Create new campaign  &lt;pre&gt;      $model-&gt;create(array(&#039;title&#039; =&gt; &#039;Testing&#039;));  &lt;/pre&gt;</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_save">save</a>()
+                    <p>Save existing campaign</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___get">__get</a>($k)
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method___opportunities">__opportunities</a>()
+                    <p>Opportunities computed property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method___donations">__donations</a>()
+                    <p>Donations computed property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___donation">__donation</a>()
+                    <p></p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method___stats">__stats</a>()
+                    <p>Stats computed property.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_publicProperties">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_publicProperties"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 35</div>
+        <code>            public            Array
+    <strong>publicProperties</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return an array of public properties</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assign">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_assign"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 46</div>
+        <code>            public            Object
+    <strong>assign</strong>(Object $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Assign one object&#039;s properties into a new object model</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Object</td>
+                <td>$obj</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetch">
+        <div class="location">at line 143</div>
+        <code>            public            Array
+    <strong>fetch</strong>(boolean $token = false)</code>
+    </h3>
+    <div class="details">
+        <p>Fetch campaigns via api</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>boolean</td>
+                <td>$token</td>
+                <td>OPTIONAL</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_related">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_related"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 76</div>
+        <code>            public            Object
+    <strong>related</strong>(String $related)</code>
+    </h3>
+    <div class="details">
+        <p>Set the related property</p>
+        <p>&lt;pre&gt;<br />
+ 		$foo-&gt;related(&#039;campaign&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$related</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_limit">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_limit"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 94</div>
+        <code>            public            Object
+    <strong>limit</strong>(Int $lim)</code>
+    </h3>
+    <div class="details">
+        <p>Set limit property.</p>
+        <p>Usually used in conjunction with offset<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo<br />
+ 			-&gt;offset(20)<br />
+ 			-&gt;limit(10);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Int</td>
+                <td>$lim</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offset">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_offset"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 112</div>
+        <code>            public            Object
+    <strong>offset</strong>(Int $os)</code>
+    </h3>
+    <div class="details">
+        <p>Set offset property.</p>
+        <p>Usually used on conjunction with limit<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo<br />
+ 			-&gt;limit(10)<br />
+ 			-&gt;offset(2);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Int</td>
+                <td>$os</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sort">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_sort"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 129</div>
+        <code>            public            Object
+    <strong>sort</strong>(String $order)</code>
+    </h3>
+    <div class="details">
+        <p>Set sort property.</p>
+        <p>Direction cna be added with a pipe<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo-&gt;sort(&#039;name&#039;);<br />
+ 		$foo-&gt;sort(&#039;name|desc&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$order</td>
+                <td>String</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_status">
+        <div class="location">in <a href="../../../MODL/GivingImpact/Model.html#method_status"><abbr title="MODL\GivingImpact\Model">Model</abbr></a> at line 145</div>
+        <code>            public            Object
+    <strong>status</strong>(String $status)</code>
+    </h3>
+    <div class="details">
+        <p>Status property</p>
+        <p>&lt;pre&gt;<br />
+ 		$foo-&gt;status(&#039;active&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$status</td>
+                <td>can be either &#039;active&#039; or &#039;inactive&#039;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___construct">
+        <div class="location">at line 70</div>
+        <code>            public            
+    <strong>__construct</strong>($c, $data = false)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$c</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_create">
+        <div class="location">at line 88</div>
+        <code>            public            Object
+    <strong>create</strong>(Array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Create new campaign  &lt;pre&gt;      $model-&gt;create(array(&#039;title&#039; =&gt; &#039;Testing&#039;));  &lt;/pre&gt;</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../MODL/GivingImpact/Exception.html"><abbr title="MODL\GivingImpact\Exception">Exception</abbr></a></td>
+                <td>If $data is not array</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method_save">
+        <div class="location">at line 117</div>
+        <code>            public            Object
+    <strong>save</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Save existing campaign</p>
+        <p>&lt;pre&gt;<br />
+      $campaign = $campaign-&gt;fetch(&#039;XXXX&#039;);<br />
+      $campaign-&gt;title = &#039;Foo&#039;;<br />
+      $campaign-&gt;save();<br />
+  &lt;/pre&gt;</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../../MODL/GivingImpact/Exception.html"><abbr title="MODL\GivingImpact\Exception">Exception</abbr></a></td>
+                <td>If campaign has no ID_TOKEN</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+                <h3 id="method___get">
+        <div class="location">at line 161</div>
+        <code>            public            
+    <strong>__get</strong>($k)</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$k</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___opportunities">
+        <div class="location">at line 173</div>
+        <code>            public            Array
+    <strong>__opportunities</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Opportunities computed property.</p>
+        <p>Automatically fetch, format and return<br />
+ child opportunities from API connection</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___donations">
+        <div class="location">at line 195</div>
+        <code>            public            Array
+    <strong>__donations</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Donations computed property.</p>
+        <p>Automatically fetches and processes donations<br />
+ from the API</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___donation">
+        <div class="location">at line 212</div>
+        <code>            public            
+    <strong>__donation</strong>()</code>
+    </h3>
+    <div class="details">
+        <p></p>
+        <p></p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___stats">
+        <div class="location">at line 221</div>
+        <code>            public            Array
+    <strong>__stats</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Stats computed property.</p>
+        <p>Automatically fetches and processes stats</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

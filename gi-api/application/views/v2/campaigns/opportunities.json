@@ -1,0 +1,4 @@
+{
+	"error": false,
+	"opportunities": <?php echo json_encode($opportunities) ?>
+}

@@ -1,0 +1,54 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+*.phar
+/vendor
+
+/www/uploads
+
+application/config/development/config.php
+application/config/development/database.php
+/application/config/giving_impact.php
+.htaccess
+application/config/config.php
+application/config/database.php
+
+#Compass/Sass
+styles/.sass-cache
+_cf_uri
+build
+cache
+Gemfile
+Gemfile.lock
+
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+pkg/
+
+# Berkshelf
+.vagrant
+Berksfile.lock
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+.kitchen/
+.kitchen.local.yml
+
+
+# Grunt #
+######################
+node_modules

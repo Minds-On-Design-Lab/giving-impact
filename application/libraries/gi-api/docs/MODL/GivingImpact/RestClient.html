@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>MODL\GivingImpact\RestClient | Giving Impact API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Giving Impact API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../MODL/GivingImpact.html">MODL\GivingImpact</a>\RestClient</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>RestClient</strong></p>
+
+            <div class="description">
+            <p>REST API Client base.</p>
+            <p>Uses cURL library to communicate with API<br />
+<br />
+ 	&lt;pre&gt;<br />
+  	$client = new \MODL\GivingImpact\RestClient<br />
+  	$client-&gt;url = &#039;http://base.url&#039;;<br />
+<br />
+ 		$return = $client-&gt;get(data(&#039;sort&#039;=&gt;&#039;created|asc&#039;));<br />
+ 	&lt;/pre&gt;</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_url">
+                                                            boolean
+                </td>
+                <td>$url</td>
+                <td class="last">Base URL</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_headers">
+                                                            array
+                </td>
+                <td>$headers</td>
+                <td class="last">Heaer stack</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_port">
+                                                            boolean
+                </td>
+                <td>$port</td>
+                <td class="last">Optional port</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user_agent">
+                                                            string
+                </td>
+                <td>$user_agent</td>
+                <td class="last">Base user agent string (default is &quot;MODL Client&quot;)</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(Object $c)
+                    <p>Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_buildURL">buildURL</a>(String $path, array $args = array())
+                    <p>Construct a fully qualified URL with path and optional key/value arguments</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_get">get</a>(Array $data = false)
+                    <p>Perform a GET action</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_post">post</a>(Array $data)
+                    <p>Perform a POST action</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    String
+                </td>
+                <td class="last">
+                    <a href="#method_curlFetch">curlFetch</a>(Mixed $data = false)
+                    <p>Query REST resource, you should not have to call this method manually, as it is called by the get and post methods.</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 61</div>
+        <code>            public            
+    <strong>__construct</strong>(Object $c)</code>
+    </h3>
+    <div class="details">
+        <p>Constructor</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Object</td>
+                <td>$c</td>
+                <td>Dependency injector</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_buildURL">
+        <div class="location">at line 77</div>
+        <code>            public            String
+    <strong>buildURL</strong>(String $path, array $args = array())</code>
+    </h3>
+    <div class="details">
+        <p>Construct a fully qualified URL with path and optional key/value arguments</p>
+        <p>&lt;pre&gt;<br />
+  	echo $client-&gt;buildURL(&#039;donations/XXX&#039;, array(&#039;foo&#039;=&gt;&#039;bar&#039;));<br />
+  	// base.url/donations/XXX?foo=bar<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$path</td>
+                <td>URL path WITHOUT base URL</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td>GET arguments</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_get">
+        <div class="location">at line 97</div>
+        <code>            public            Object
+    <strong>get</strong>(Array $data = false)</code>
+    </h3>
+    <div class="details">
+        <p>Perform a GET action</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Array</td>
+                <td>$data</td>
+                <td>OPTIONAL data to send in GET</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>JSON decoded object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_post">
+        <div class="location">at line 124</div>
+        <code>            public            Object
+    <strong>post</strong>(Array $data)</code>
+    </h3>
+    <div class="details">
+        <p>Perform a POST action</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Array</td>
+                <td>$data</td>
+                <td>POST data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>JSON decoded object</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_curlFetch">
+        <div class="location">at line 149</div>
+        <code>            public            String
+    <strong>curlFetch</strong>(Mixed $data = false)</code>
+    </h3>
+    <div class="details">
+        <p>Query REST resource, you should not have to call this method manually, as it is called by the get and post methods.</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Mixed</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>String</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

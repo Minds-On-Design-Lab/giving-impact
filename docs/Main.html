@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Main | Giving Impact</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Main" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Giving Impact</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Main</h1>
+    </div>
+
+    <p>    class
+    <strong>Main</strong>        extends <abbr title="CI_Controller">CI_Controller</abbr>
+</p>
+
+            <div class="description">
+            <p>Main controller</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_index">index</a>()
+                                            <p>Index handler. If the user is currently logged in, will redirect
+to the dashboard.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_login">login</a>()
+                                            <p>Login URL callback. Accepts via POST:
+ * email String
+ * password String</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_logout">logout</a>()
+                                            <p>Logout URL callback. Redirects back to site root</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_new_account">new_account</a>()
+                                            <p>Create a new accounts. Accepts via POST:</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forgot">forgot</a>()
+                                            <p>Forgot password handler.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_forgot_verify">forgot_verify</a>()
+                                            <p>Handles the verification of the password change requests. Accepts
+the change requests HASH as the second URL segment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 13</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">at line 30</div>
+        <code>                    
+    
+    <strong>index</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Index handler. If the user is currently logged in, will redirect
+to the dashboard.</p>                    <p>Loads 'main/index' view</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at line 60</div>
+        <code>                    
+    
+    <strong>login</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Login URL callback. Accepts via POST:
+ * email String
+ * password String</p>                    <p>If valid login, will redirect to dashboard, failure will redirect
+back to login with flashdata key 'login_message' set with the
+error message</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_logout">
+        <div class="location">at line 93</div>
+        <code>                    
+    
+    <strong>logout</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Logout URL callback. Redirects back to site root</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_new_account">
+        <div class="location">at line 118</div>
+        <code>                    
+    
+    <strong>new_account</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create a new accounts. Accepts via POST:</p>                    <p><ul>
+<li><p>org_name String</p>
+
+<ul>
+<li>first_name String</li>
+<li>last_name String</li>
+<li>email String</li>
+<li>token String</li>
+<li>password String</li>
+<li>password2 String</li>
+</ul>
+
+<p>If account creation errors, will load 'main/new_account' with appropriate
+form error. A successful creation will authenticate the user and redirect
+them to the dashboard.</p></li>
+</ul>
+
+<p>On initial load, loads 'main/new_account' view</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgot">
+        <div class="location">at line 210</div>
+        <code>                    
+    
+    <strong>forgot</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Forgot password handler.</p>                    <p>On intial load, loads 'main/forgot' view. After POSTing valid email address
+creates new password reset request (which does not generate a new password),
+notifies user via email and reloads the 'main/forgot' view with:
+ * message String
+ * type String</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_forgot_verify">
+        <div class="location">at line 257</div>
+        <code>                    
+    
+    <strong>forgot_verify</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Handles the verification of the password change requests. Accepts
+the change requests HASH as the second URL segment.</p>                    <p>Loads 'main/reset' view with
+ * message String
+ * type String
+ * hash String</p>
+
+<p>After successfully POSTing form, password is reset and user is redirected
+back to login form. Unsuccessful change request is brought back to the form
+with the appropriate error set</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

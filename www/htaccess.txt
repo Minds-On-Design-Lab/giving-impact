@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    DirectoryIndex index.php api.php
+
+    # Add your path here if you're install is in a different directory
+    #RewriteBase /path/to/app
+
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f
+    RewriteRule ^ %{DOCUMENT_ROOT}%{REQUEST_URI} [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
+    RewriteRule ^/$ index.php [L]
+
+    RewriteRule ^api(.*)$ api.php?/api/$1 [L]
+
+    RewriteRule ^(.+)$ index.php?/$1 [L]
+</IfModule>

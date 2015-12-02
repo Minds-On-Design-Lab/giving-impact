@@ -1,0 +1,24 @@
+.reveal-modal {
+  @media #{$small-only} {
+    margin: 15px;
+    width: auto;
+  }
+
+  .close-reveal-modal {
+    font-size: $fontsize;
+    color: $darkgrey;
+  }
+
+  .close-reveal-modal:not(.button) {
+    position: relative;
+    font-weight: inherit;
+    text-shadow: none;
+    top: inherit;
+    right: inherit;
+  }
+  
+  form {
+    margin: 0;
+    padding: 0;
+  }
+}

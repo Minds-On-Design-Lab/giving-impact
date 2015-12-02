@@ -1,0 +1,9 @@
+.side-bar {
+  @media #{$small-only} {
+    margin-top: 20px;
+  }
+
+  ol li, ul li {
+    font-size: rem-calc(14px);
+  }
+}

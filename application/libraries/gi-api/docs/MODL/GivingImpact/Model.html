@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>MODL\GivingImpact\Model | Giving Impact API</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">Giving Impact API</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../MODL/GivingImpact.html">MODL\GivingImpact</a>\Model</h1>
+    </div>
+        <div class="content">
+                <p>class    <strong>Model</strong></p>
+
+            <div class="description">
+            <p>Model base, provides the base for the fluent interface</p>
+            <p></p>
+        </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    Array
+                </td>
+                <td class="last">
+                    <a href="#method_publicProperties">publicProperties</a>()
+                    <p>Return an array of public properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_assign">assign</a>(Object $obj)
+                    <p>Assign one object&#039;s properties into a new object model</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_fetch">fetch</a>(String $token)
+                    <p>Base fetch class, overridden by most models</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_related">related</a>(String $related)
+                    <p>Set the related property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_limit">limit</a>(Int $lim)
+                    <p>Set limit property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_offset">offset</a>(Int $os)
+                    <p>Set offset property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_sort">sort</a>(String $order)
+                    <p>Set sort property.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    Object
+                </td>
+                <td class="last">
+                    <a href="#method_status">status</a>(String $status)
+                    <p>Status property</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_publicProperties">
+        <div class="location">at line 35</div>
+        <code>            public            Array
+    <strong>publicProperties</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Return an array of public properties</p>
+        <p></p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_assign">
+        <div class="location">at line 46</div>
+        <code>            public            Object
+    <strong>assign</strong>(Object $obj)</code>
+    </h3>
+    <div class="details">
+        <p>Assign one object&#039;s properties into a new object model</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Object</td>
+                <td>$obj</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_fetch">
+        <div class="location">at line 59</div>
+        <code>            public            Object
+    <strong>fetch</strong>(String $token)</code>
+    </h3>
+    <div class="details">
+        <p>Base fetch class, overridden by most models</p>
+        <p></p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$token</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_related">
+        <div class="location">at line 76</div>
+        <code>            public            Object
+    <strong>related</strong>(String $related)</code>
+    </h3>
+    <div class="details">
+        <p>Set the related property</p>
+        <p>&lt;pre&gt;<br />
+ 		$foo-&gt;related(&#039;campaign&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$related</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_limit">
+        <div class="location">at line 94</div>
+        <code>            public            Object
+    <strong>limit</strong>(Int $lim)</code>
+    </h3>
+    <div class="details">
+        <p>Set limit property.</p>
+        <p>Usually used in conjunction with offset<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo<br />
+ 			-&gt;offset(20)<br />
+ 			-&gt;limit(10);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Int</td>
+                <td>$lim</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_offset">
+        <div class="location">at line 112</div>
+        <code>            public            Object
+    <strong>offset</strong>(Int $os)</code>
+    </h3>
+    <div class="details">
+        <p>Set offset property.</p>
+        <p>Usually used on conjunction with limit<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo<br />
+ 			-&gt;limit(10)<br />
+ 			-&gt;offset(2);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>Int</td>
+                <td>$os</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sort">
+        <div class="location">at line 129</div>
+        <code>            public            Object
+    <strong>sort</strong>(String $order)</code>
+    </h3>
+    <div class="details">
+        <p>Set sort property.</p>
+        <p>Direction cna be added with a pipe<br />
+<br />
+ 	&lt;pre&gt;<br />
+ 		$foo-&gt;sort(&#039;name&#039;);<br />
+ 		$foo-&gt;sort(&#039;name|desc&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$order</td>
+                <td>String</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_status">
+        <div class="location">at line 145</div>
+        <code>            public            Object
+    <strong>status</strong>(String $status)</code>
+    </h3>
+    <div class="details">
+        <p>Status property</p>
+        <p>&lt;pre&gt;<br />
+ 		$foo-&gt;status(&#039;active&#039;);<br />
+ 	&lt;/pre&gt;</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>String</td>
+                <td>$status</td>
+                <td>can be either &#039;active&#039; or &#039;inactive&#039;</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>Object</td>
+            <td>this</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

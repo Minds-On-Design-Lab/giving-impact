@@ -1,0 +1,78 @@
+// Helpful mixins
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition2($transition, $transition2) {
+  -webkit-transition: $transition, $transition2;
+  -moz-transition: $transition, $transition2;
+  -o-transition: $transition, $transition2;
+  transition: $transition, $transition2;
+}
+
+@mixin multicolumn($number, $gap, $rule) {
+  -webkit-column-count: $number;
+  -webkit-column-gap: $gap;
+  -webkit-column-rule: $rule;
+  -moz-column-count: $number;
+  -moz-column-gap: $gap;
+  -moz-column-rule: $rule;
+  column-count: $number;
+  column-gap: $gap;
+  column-rule: $rule;
+}
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    clear:both;
+  }
+}
+
+// Border Box Sizing: apply to body element
+  // Keeps padding and border within box dimensions
+%border-box {
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+// Hides text for image replacement
+%hide-text      {text-indent:-9999px;height:0;margin: 0;}
+
+// Font smoothing for Webkit and FireFox 25
+%font-smooth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+// Fixes line-wrap issue on iOS
+%line-wrap {                  // Wrap long strings of text
+  white-space: pre !important;           /* CSS 2.0 */
+  white-space: pre-wrap !important;      /* CSS 2.1 */
+  white-space: pre-line !important;      /* CSS 3.0 */
+  white-space: -pre-wrap !important;     /* Opera 4-6 */
+  white-space: -o-pre-wrap !important;   /* Opera 7 */
+  white-space: -moz-pre-wrap !important; /* Mozilla */
+  white-space: -hp-pre-wrap !important;  /* HP Printers */
+  word-wrap: break-word !important;      /* IE 5+ */
+}

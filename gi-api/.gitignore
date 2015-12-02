@@ -1,0 +1,16 @@
+.DS_Store
+www/.htaccess
+giving-impact-app.gif
+givingimpact_dev.sql
+application/config/config.php
+application/config/database.php
+application/controllers/v3/
+docs/
+www/test-runner.php
+application/config/testing/database.php
+cache/twig
+cache
+doxygen
+styles/.sass-cache
+
+/vendor/

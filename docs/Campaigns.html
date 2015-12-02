@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Campaigns | Giving Impact</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Campaigns" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Giving Impact</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Campaigns</h1>
+    </div>
+
+    <p>    class
+    <strong>Campaigns</strong>        extends <abbr title="CI_Controller">CI_Controller</abbr>
+</p>
+
+            <div class="description">
+            <p>Campaigns Controller</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_index">index</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_view">view</a>()
+                                            <p>View single campaign</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit_basic">edit_basic</a>()
+                                            <p>Edit basic campaign settings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit_design">edit_design</a>()
+                                            <p>Edit campaign design settings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit_receipt">edit_receipt</a>()
+                                            <p>Edit campaign receipt settings</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit_fields">edit_fields</a>()
+                                            <p>Edit campaign custom fields</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit_campaign_fields">edit_campaign_fields</a>()
+                                            <p>Edit campaign create fields</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit">edit</a>()
+                                            <p>Main edit view</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_new_campaign">new_campaign</a>()
+                                            <p>Create new campaign</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation">donation</a>()
+                                            <p>View single donation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation_edit">donation_edit</a>()
+                                            <p>Create/edit single donation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation_refund">donation_refund</a>()
+                                            <p>Refund handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donations">donations</a>()
+                                            <p>View recent donations. The final URL segment is used as the offset to
+paginate results.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_export">export</a>()
+                                            <p>Exports donation log to CSV</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 13</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">at line 37</div>
+        <code>                    
+    
+    <strong>index</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">at line 50</div>
+        <code>                    
+    
+    <strong>view</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View single campaign</p>                    <p>Loads 'campaigns/view' with:
+ * campaign Campaign<em>model
+ * stats Stats</em>model
+ * previous String
+ * next String</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit_basic">
+        <div class="location">at line 99</div>
+        <code>                    
+    
+    <strong>edit_basic</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit basic campaign settings</p>                    <p>Loads 'campaigns/edit/basic' with:
+ * campaign Campaign_model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit_design">
+        <div class="location">at line 182</div>
+        <code>                    
+    
+    <strong>edit_design</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit campaign design settings</p>                    <p>Loads 'campaigns/edit/design' view with:
+ * campaign Campaign_model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit_receipt">
+        <div class="location">at line 246</div>
+        <code>                    
+    
+    <strong>edit_receipt</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit campaign receipt settings</p>                    <p>Loads 'campaigns/edit/receipt' view with:
+ * campaign Campaign_model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit_fields">
+        <div class="location">at line 310</div>
+        <code>                    
+    
+    <strong>edit_fields</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit campaign custom fields</p>                    <p>Loads 'campaigns/edit/fields' view with
+ * campaign Campaign_model</p>
+
+<p>Note that this view requires the Handlebars.js library in order to
+function properly.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit_campaign_fields">
+        <div class="location">at line 386</div>
+        <code>                    
+    
+    <strong>edit_campaign_fields</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit campaign create fields</p>                    <p>Loads 'campaigns/edit/campaign<em>fields' view with
+ * campaign Campaign</em>model</p>
+
+<p>Note that this view requires the Handlebars.js library in order to
+function properly.</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit">
+        <div class="location">at line 459</div>
+        <code>                    
+    
+    <strong>edit</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Main edit view</p>                    <p>Loads 'campaigns/edit' view with
+ * campaign Campaign_model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_new_campaign">
+        <div class="location">at line 483</div>
+        <code>                    
+    
+    <strong>new_campaign</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create new campaign</p>                    <p>Loads 'campaign/edit/basic' with
+ * campaign EMPTY Campaign_model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation">
+        <div class="location">at line 538</div>
+        <code>                    
+    
+    <strong>donation</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View single donation</p>                    <p>Loads campaigns/donation view with
+ * donation Donation<em>model
+ * campaign Campaign</em>model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation_edit">
+        <div class="location">at line 565</div>
+        <code>                    
+    
+    <strong>donation_edit</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Create/edit single donation</p>                    <p>Loads campaigns/donation edit view with
+ * campaign Campaign<em>model
+ * donation Donation</em>model</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation_refund">
+        <div class="location">at line 678</div>
+        <code>                    
+    
+    <strong>donation_refund</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Refund handler</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donations">
+        <div class="location">at line 786</div>
+        <code>                    
+    
+    <strong>donations</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View recent donations. The final URL segment is used as the offset to
+paginate results.</p>                    <p>Loads 'campaigns/donations' with:
+ * campaign Campaign<em>model
+ * donations Array of Donation</em>model
+ * previous String
+ * next String</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_export">
+        <div class="location">at line 838</div>
+        <code>                    
+    
+    <strong>export</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Exports donation log to CSV</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

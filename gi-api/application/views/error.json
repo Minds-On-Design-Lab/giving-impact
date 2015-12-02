@@ -1,0 +1,5 @@
+{
+	"error": true,
+	"message": "<?php echo $message ?>",
+	"type": "<?php echo $type ?>"
+}

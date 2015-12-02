@@ -1,0 +1,4 @@
+[submodule "application/libraries/gi-api"]
+	path = application/libraries/gi-api
+	url = git@github.com:Minds-On-Design-Lab/givingimpact-php.git
+    auto-update=yes

@@ -1,0 +1,9 @@
+RewriteEngine On
+# Add your path here if you're install is in a different directory
+#RewriteBase /path/to/install
+
+# Removes index.php
+RewriteCond $1 !\.(gif|jpe?g|png)$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]

@@ -1,0 +1,304 @@
+/* General */
+  .clearfix {@include clearfix;}
+
+  body { font-family: $gifontfamily; color: $darkgrey; font-size: $fontsize;}
+  a {
+    text-decoration: none;
+    color: $blue;
+    &:hover {
+      text-decoration: underline;
+      color: $orange;
+    }
+  }
+  p {
+    font-size: $fontsize;
+    line-height: $lineheight;
+  }
+
+  #primary-nav {
+    border-bottom: $lightblue 14px solid;
+    margin-bottom: 70px;
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+
+    ul.right a {
+      font-family: $gifontfamily;
+      font-weight: bold;
+      font-size: rem-calc(15px);
+      color: #ace2f8;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  #page { color: $white; background-color: $darkgrey; padding-bottom: 40px;}
+  #page-header {
+    padding-top: rem-calc(14px);
+    border-bottom: $medgrey 1px solid;
+    margin-bottom: 25px;
+    @media only screen and (max-width: 767px) {
+      padding-bottom: 10px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {color: #ffffff; font-family: $gifontfamily; font-weight: bold;}
+  #page h1 { font-size: 24px; font-weight:normal; }
+  #page h1.page-title {
+    float: none;
+    @media #{$medium-up} {
+      float: left;
+    }
+  }
+  a.page-title {
+      margin-top: rem-calc(4px);
+      @media #{$medium-up} {
+        float: right;
+      }
+  }
+  #right h3 {
+    line-height:19px;
+    font-size:16px;
+    font-weight: bold;
+    padding:10px 15px;
+    margin: 0 0 10px 0;
+    @include shadow(5px);
+    background: #747474;
+  }
+  .box {
+    color: $darkgrey;
+    background: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: $lightblue 1px solid;
+    @include radius(5px);
+
+    h4 {
+      color: $darkgrey;
+      font-size: $fontsize;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+      li {
+        font-size: $fontsize;
+      }
+    }
+  }
+  .box h2, .box h3 {
+    background-color: $blue;
+    font-size: rem-calc(16px);
+    font-weight: bold;
+    line-height: rem-calc(24px);
+    padding: 8px 3px 8px 10px;
+    margin: 0 0 10px 0;
+  }
+  .box h2 a {margin-top: -3px; margin-right: 5px;}
+  .box h2 a i {
+    color: $darkgrey;
+    font-size: 18px;
+    line-height: 24px;
+    @media only screen and (max-width: 767px) {
+      float: right;
+      margin-right: 5px;
+      line-height: 18px;
+    }
+
+  }
+  .box h2 a i:hover {color: $medgrey;}
+  #page-tabs {border-bottom: $blue 5px solid;}
+  #page-tabs .tabs {margin-bottom: 0; border: none;}
+  #page-tabs .tabs dd {
+    margin-right: 3px;
+    @media only screen and (max-width: 767px) {
+      margin-right: 0;
+    }
+  }
+  #page-tabs .tabs dd a {
+    font-size: 20px;
+    font-weight: normal;
+    background: $darkgrey;
+    color: $medgrey;
+    padding: 0 15px;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  #page-tabs .tabs dd.active {margin-top: 0; border-top: none;}
+  #page-tabs .tabs dd.active a {color: #ffffff; background: $blue; border-left: none; border-right: none;}
+
+.currency-alert {
+  text-align: center;
+  padding: 5px;
+  background-color: #FFD5D5;
+  a {
+    color: #f00;
+  }
+}
+/* Developer */
+.sandbox-alert {
+  text-align: center;
+  background-color: $orange;
+  padding: 5px;
+  color: $darkgrey;
+  font-weight: bold;
+}
+
+/* Icons */
+  i.icon {color: $blue; font-size: 18px;}
+  i.action {
+    display: inline-block;
+    vertical-align: 0;
+  }
+  a:hover i.action {color: $orange;}
+
+/* General Lists */
+  dl {
+    margin-left: 10px;
+
+    dt {
+      font-weight: bold;
+      font-size: rem-calc(16px);
+        span {
+          font-weight: normal;
+        }
+    }
+
+    dd {
+      margin-bottom: rem-calc(20px);
+    }
+
+  }
+
+  ul.bullet {list-style: disc; margin-left: 40px;}
+  .simple-list ul {font-size: 12px; list-style: none;}
+  .simple-list li{
+    font-size: 12px;
+    list-style: none;
+    line-height:16px;
+    border-bottom:1px solid #436471;
+    padding-left:15px;
+    padding-bottom:8px;
+    margin-bottom:8px;
+  }
+  .simple-list li h4 {
+    font-size: rem-calc(12px);
+    line-height: rem-calc(14px);
+    margin: 0;
+    padding: 0
+  }
+  .simple-list li h4 a, .simple-list li a {color: $orange;}
+  .simple-list li h4 a:hover, .simple-list li a:hover {text-decoration: underline;}
+
+  ul.side-bar {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .side-bar a {
+    color: $orange;
+  }
+/* Nav */
+  .top-bar ul > li.name img {height: 45px; margin-top: -10px;}
+  @media only screen and (max-width: 767px) {
+    .top-bar ul > li.name {background: $darkgrey;}
+  }
+
+/* Home */
+  .campaign-block {
+    color: $darkgrey;
+    background: #ffffff;
+    padding-top: 1px;
+    height: 300px;
+    @media only screen and (max-width: 767px) {
+      height: auto;
+    }
+    position: relative;
+  }
+  .campaign-block h2 {
+    line-height:18px;
+    font-size:16px;
+    font-weight:normal;
+    padding:8px 10px;
+    margin:15px 15px 10px 15px;
+    background: $blue;
+  }
+  .campaign-block h2 a {color: #ffffff;}
+
+  figure.chart {
+    margin: 0;
+  }
+
+/* Campaigns & Opportunities */
+  dl.campaign-nav, dl.opportunity-nav {
+    margin-left: 0;
+  }
+  .campaign-desc p {}
+  .metrics li {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .metrics .value {
+    padding-left: 3px;
+    font-size: 24px;
+    font-weight: normal;
+    color: $blue;
+  }
+
+    /* Just displays a color swatch example */
+    .color-example {
+        border: 1px solid #ddd;
+        padding: 0 10px;
+        margin-right: 0.5em;
+    }
+
+    dl.campaign-responses {
+      margin-left: 0;
+
+      dt {
+        font-size: $fontsize;
+        font-weight: bold;
+      }
+      dd {
+        font-size: $fontsize;
+      }
+    }
+
+/* Footer */
+  footer {padding: 10px 0;}
+  footer p {font-size: 12px; margin-bottom: 8px;}
+  .alert-box {
+    padding: 10px 30px;
+    @include radius(10px);
+  }
+
+/* Custom Fields */
+    .field-disabled td {
+        color: #999;
+    }
+
+  .well {
+    padding: 10px;
+    margin-bottom: 1em;
+    &.primary {
+      background: #d3eef9;
+      a {
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #stripe-logo-connected {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  #select-currency {
+    margin-left: 0;
+  }

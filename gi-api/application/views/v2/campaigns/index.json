@@ -1,0 +1,4 @@
+{
+	"error": false,
+	"campaigns": <?php echo json_encode($campaigns) ?>
+}

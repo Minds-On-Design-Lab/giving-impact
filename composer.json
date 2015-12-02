@@ -1,0 +1,17 @@
+{
+    "name": "modl/giving-impact",
+    "authors": [
+        {
+            "name": "Mike Joseph",
+            "email": "mikej@mod-lab.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "sami/sami": "3.0.*@dev",
+        "robmorgan/phinx": "dev-master",
+        "symfony/intl": "~2.6",
+        "aws/aws-sdk-php": "~2.7",
+        "wp-cli/php-cli-tools": "^0.10.5"
+    }
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Opportunities | Giving Impact</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/sami.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Opportunities" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Giving Impact</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                                        <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>Opportunities</h1>
+    </div>
+
+    <p>    class
+    <strong>Opportunities</strong>        extends <abbr title="CI_Controller">CI_Controller</abbr>
+</p>
+
+            <div class="description">
+            <p>Opportunities controller</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_index">index</a>()
+                                            <p>Index action handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    <abbr title="[type]">[type]</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_inactive">inactive</a>()
+                                            <p>View only inactive opportunities</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_view">view</a>()
+                                            <p>View single opportunity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_edit">edit</a>()
+                                            <p>Edit or create new opportunity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_promote">promote</a>()
+                                            <p>Promote view action</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_new_opportunity">new_opportunity</a>()
+                                            <p>New opportunity handler. Uses the existing edit view
+but handles logic specific to creating new opportunities</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donations">donations</a>()
+                                            <p>Donation view method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation">donation</a>()
+                                            <p>View donation handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation_edit">donation_edit</a>()
+                                            <p>Edit donation handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_donation_refund">donation_refund</a>()
+                                            <p>Refund handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_export">export</a>()
+                                            <p>Export handler</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_go_export">go_export</a>()
+                                            <p>Exports opportunities list to CSV</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_supporters">supporters</a>()
+                                            <p>Supporters view method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_supporters_remove">supporters_remove</a>()
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 11</div>
+        <code>                    
+    
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_index">
+        <div class="location">at line 46</div>
+        <code>                    
+    
+    <strong>index</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Index action handler</p>                    <p>Loads 'opportunities/index' view with
+ * campaign Campaign<em>model
+ * opportunities Array of Opportunity</em>models
+ * previous String
+ * next String</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inactive">
+        <div class="location">at line 103</div>
+        <code>                    
+    <abbr title="[type]">[type]</abbr>
+    <strong>inactive</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View only inactive opportunities</p>                    <p>Loads 'opportunities/inactive' view with:</p>
+
+<ul>
+<li>inactive Array of Opportunity_models</li>
+<li>campaigns Array of Opportunity_models</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>
+    <abbr title="[type]">[type]</abbr></td>
+            <td>[description]</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_view">
+        <div class="location">at line 139</div>
+        <code>                    
+    
+    <strong>view</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View single opportunity</p>                    <p>Loads 'opportunities/view' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+<li>donations Array of Donation_models</li>
+<li>stats Array of Stats_models</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_edit">
+        <div class="location">at line 191</div>
+        <code>                    
+    
+    <strong>edit</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit or create new opportunity</p>                    <p>Loads 'opportunities/edit' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+</ul>
+
+<p>'opportunity' will be an empty model when creating a new opportunity</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_promote">
+        <div class="location">at line 318</div>
+        <code>                    
+    
+    <strong>promote</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Promote view action</p>                    <p>Loads 'opportunities/promote' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_new_opportunity">
+        <div class="location">at line 349</div>
+        <code>                    
+    
+    <strong>new_opportunity</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>New opportunity handler. Uses the existing edit view
+but handles logic specific to creating new opportunities</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donations">
+        <div class="location">at line 452</div>
+        <code>                    
+    
+    <strong>donations</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Donation view method</p>                    <p>Loads 'opporunities/donations' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+<li>donations Array of Donation_models</li>
+<li>previous String</li>
+<li>next String</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation">
+        <div class="location">at line 519</div>
+        <code>                    
+    
+    <strong>donation</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>View donation handler</p>                    <p>Loads 'opportunities/donation' view</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+<li>donation Donation_model</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation_edit">
+        <div class="location">at line 560</div>
+        <code>                    
+    
+    <strong>donation_edit</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Edit donation handler</p>                    <p>Loads 'opportunities/donation' edit view</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+<li>donation Donation_model</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_donation_refund">
+        <div class="location">at line 685</div>
+        <code>                    
+    
+    <strong>donation_refund</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Refund handler</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_export">
+        <div class="location">at line 799</div>
+        <code>                    
+    
+    <strong>export</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Export handler</p>                    <p>Exports donation log to CSV directly to the browser</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_go_export">
+        <div class="location">at line 839</div>
+        <code>                    
+    
+    <strong>go_export</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Exports opportunities list to CSV</p>                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supporters">
+        <div class="location">at line 877</div>
+        <code>                    
+    
+    <strong>supporters</strong>()</code>
+    </h3>
+    <div class="details">
+                    <div class="method-description">
+                                    <p>Supporters view method</p>                    <p>Loads 'opportunities/supporters' view with</p>
+
+<ul>
+<li>campaign Campaign_model</li>
+<li>opportunity Opportunity_model</li>
+</ul>
+</p>            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supporters_remove">
+        <div class="location">at line 924</div>
+        <code>                    
+    
+    <strong>supporters_remove</strong>()</code>
+    </h3>
+    <div class="details">
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
