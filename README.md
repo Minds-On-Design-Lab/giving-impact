@@ -8,6 +8,8 @@ We've designed our API for a **refreshingly simple and customizable** experience
 
 Giving Impact is copyright Minds on Design Lab, Inc. and licensed under The MIT License (MIT)
 
+Giving Impact uses [semantic versioning](http://semver.org/)
+
 INSTALL
 =======
 
