@@ -2,6 +2,9 @@
 if (!$config) {
     $config = array();
 }
+
+// trying to not pollute the global space
+//
 call_user_func(function() use (&$config) {
 
     $config['gi-user-agent']    = 'gi-official-2.0';
