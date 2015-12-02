@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-define('_GI_VER', '20151201001');
+define('_GI_VER', '3.0.0');
 
 /*
 |--------------------------------------------------------------------------
