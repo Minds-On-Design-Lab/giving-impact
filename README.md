@@ -4,7 +4,7 @@ Giving Impact™ is an open source solution designed to build on the fantastic S
 
 Our suite of tools includes a fantastic dashboard for managing fundraising initiatives and an API that allows web development resources to create rich donation experiences more efficiently.
 
-We've designed our API for a **refreshingly simple and customizable** experience. If you are brand new to Giving Impact, we'd recommend giving our [general introduction docs](http://givingimpact.com/docs) a read. For those ready to get to integrating, please, engage!
+We've designed our API for a **refreshingly simple and customizable** experience. If you are brand new to Giving Impact, we'd recommend visiting our [website](http://givingimpact.com) a visit and giving our [docs](http://givingimpact.com/docs) a read. For those ready to get to integrating, please, engage!
 
 Giving Impact is copyright Minds on Design Lab, Inc. and licensed under The MIT License (MIT)
 
@@ -114,7 +114,7 @@ If you need to run the web accessible directory in an entirely different place t
 
 ##### Do I really need to have the MySQL plugin installed?
 
-Yes. This version of Giving Impact runs on the 2.x version of the Code Igniter framework, which does not support PDO. You can use the MySQLi extension, though. Just update the driver listed in `application/config/database.php` and the one listed in `phinx.yml` to `"mysqli"` and you should be good to go.
+Yes. This version of Giving Impact runs on the 2.x version of the CodeIgniter framework, which does not support PDO. You can use the MySQLi extension, though. Just update the driver listed in `application/config/database.php` and the one listed in `phinx.yml` to `"mysqli"` and you should be good to go.
 
 ##### I like living on the edge and only use PHP 7. Does GI work?
 
