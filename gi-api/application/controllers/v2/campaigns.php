@@ -37,7 +37,10 @@ class Campaigns extends CI_Controller {
 		'receipt',
 		'analytics_id',
 		'campaign_color',
-		'header_font_color'
+		'header_font_color',
+		'frequency_type',
+		'frequency_period',
+
 	);
 
 	public function __construct() {
@@ -627,9 +630,53 @@ class Campaigns extends CI_Controller {
 			    $k = 'minimum_donation_amount';
 			} elseif( $k == 'header_font_color' ) {
 				$k = 'header_font';
+			} elseif( $k == 'frequency_type' ) {
+				switch($v) {
+					case 'recurring':
+					case 1:
+						$campaign->frequency_type = 1;
+						break;
+					case 'checkout':
+					case 2:
+						$campaign->frequency_type = 2;
+						break;
+					case 'onetime':
+					case 0:
+					default:
+						$campaign->frequency_type = 0;
+						break;
+				}
+				continue;
+			} elseif( $k == 'frequency_period' ) {
+				switch($v) {
+					case 'quarterly':
+					case 3:
+						$campaign->frequency_period = 3;
+						break;
+					case 'biyearly':
+					case 6:
+						$campaign->frequency_period = 6;
+						break;
+					case 'yearly':
+					case 12:
+						$campaign->frequency_period = 12;
+						break;
+					case 'monthly':
+					case 1:
+						$campaign->frequency_period = 1;
+						break;
+					default:
+						$campaign->frequency_period = 0;
+						break;
+				}
+				continue;
 			}
 
 			$campaign->$k = $this->security->xss_clean($v);
+		}
+
+		if( !$campaign->frequency_type ) {
+			$campaign->frequency_period = 0;
 		}
 
 		if( array_key_exists('receipt', $data) ) {

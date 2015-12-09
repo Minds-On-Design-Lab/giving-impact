@@ -44,6 +44,8 @@ class Campaign extends \MODL\GivingImpact\Model {
     public $header_font_color = false;
     public $campaign_color = false;
     public $donation_minimum = false;
+    public $frequency_type = 0;
+    public $frequency_period = 0;
     // public $send_receipt = false;
     // public $email_org_name = false;
     // public $reply_to_address = false;

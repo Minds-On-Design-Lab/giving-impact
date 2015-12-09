@@ -178,6 +178,38 @@ function prep_campaigns($rows, $recurse = true) {
 
 		}
 
+		switch($row->frequency_type) {
+			case 1:
+				$item['frequency_type'] = 'recurring';
+				break;
+			case 2:
+				$item['frequency_type'] = 'checkout';
+				break;
+			case 0:
+			default:
+				$item['frequency_type'] = 'onetime';
+				break;
+		}
+
+		switch($row->frequency_period) {
+			case 1:
+				$item['frequency_period'] = 'monthly';
+				break;
+			case 3:
+				$item['frequency_period'] = 'quarterly';
+				break;
+			case 6:
+				$item['frequency_period'] = 'biyearly';
+				break;
+			case 12:
+				$item['frequency_period'] = 'yearly';
+				break;
+			case 0:
+			default:
+				$item['frequency_period'] = '';
+				break;
+		}
+
 		if( get_instance()->input->related() && property_exists($row, 'campaign_id')
 			&& $recurse ) {
 

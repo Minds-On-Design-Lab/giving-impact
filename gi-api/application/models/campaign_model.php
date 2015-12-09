@@ -37,8 +37,10 @@ class Campaign_model extends GI_Model {
     public $total_opportunities			= 0;
     public $display_donation_target		= 1;
     public $display_donation_total		= 1;
-    public $header_font					= NULL;
-    public $campaign_color				= NULL;
+    // public $header_font					= NULL;
+    // public $campaign_color				= NULL;
+    public $frequency_type              = 0;
+    public $frequency_period            = 0;
 
 	protected $_temp_file = false;
 	protected $_temp_file_type = 'jpg';
