@@ -40,8 +40,10 @@ class Campaign_model extends GI_Model {
     public $total_opportunities = 0;
     public $display_donation_target		= 1;
     public $display_donation_total		= 1;
-    public $header_font					= NULL;
-    public $campaign_color				= NULL;
+    // public $header_font					= NULL;
+    // public $campaign_color				= NULL;
+    public $frequency_type              = 0;
+    public $frequency_period            = 0;
 
     private $_thumb_url = false;
     private $_image_url = false;
@@ -202,6 +204,27 @@ class Campaign_model extends GI_Model {
 
 		$this->_fetch_urls();
         return $this->_thumb_url;
+    }
+
+    public function __frequency_period_label() {
+        switch($this->frequency_period) {
+            case 'quarterly':
+            case 3:
+                return 'quarterly';
+                break;
+            case 'biyearly':
+            case 6:
+                return 'bi-annually';
+                break;
+            case 'yearly':
+            case 12:
+                return 'annually';
+                break;
+            case 'monthly':
+            case 1:
+                return 'monthly';
+                break;
+        }
     }
 
     private function _fetch_urls() {
