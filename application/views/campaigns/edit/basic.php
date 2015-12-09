@@ -132,6 +132,30 @@
 
                     <div class="row">
                         <div class="small-12 medium-8 columns">
+                            <label>Donation Frequency</label>
+                            <p class="directions">Allow for recurring donations.</p>
+                            <select name="frequency">
+                                <option value="onetime"<?php if( $this->input->post('frequency') === 'onetime' || !$campaign->frequency_type ) : ?> selected<?php endif ?>>Only one time</option>
+                                <option value="recurring"<?php if( $this->input->post('frequency') == 'recurring' || $campaign->frequency_type == 'recurring' ) : ?> selected<?php endif ?>>Only recurring</option>
+                                <option value="checkout"<?php if( $this->input->post('frequency') == 'checkout' || $campaign->frequency_type == 'checkout' ) : ?> selected<?php endif ?>>Decide at checkout</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
+                            <label>Frequency Period:</label>
+                            <p class="directions">How often should recurring donations be billed?</p>
+                            <select name="interval">
+                                <option value="monthly"<?php if( $this->input->post('interval') == 'monthly' || $campaign->frequency_period == 'monthly' || !$campaign->frequency_period ) : ?> selected<?php endif ?>>Monthy</option>
+                                <option value="quarterly"<?php if( $this->input->post('interval') == 'quarterly' || $campaign->frequency_period == 'quarterly' ) : ?> selected<?php endif ?>>Every 3 months</option>
+                                <option value="biyearly"<?php if( $this->input->post('interval') == 'biyearly' || $campaign->frequency_period == 'biyearly' ) : ?> selected<?php endif ?>>Every 6 months</option>
+                                <option value="yearly"<?php if( $this->input->post('interval') == 'yearly' || $campaign->frequency_period == 'yearly' ) : ?> selected<?php endif ?>>Yearly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="small-12 medium-8 columns">
                             <label>Campaign Type<span class="required">*</span></label>
                             <label for="input-type-single" class="label-checkbox">
                                 <input type="radio" name="type" value="0" id="input-type-single"<?php if( $this->input->post('type') === 0 || !$campaign->has_giving_opportunities ) : ?> checked<?php endif ?> /> This is a single giving opportunity campaign

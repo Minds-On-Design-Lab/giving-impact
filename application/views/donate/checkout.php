@@ -45,6 +45,15 @@
                         - <?php echo $donation_level->description ?>
                       <?php endif ?>
                       </strong>
+                      <?php if( ($campaign->campaign && $campaign->campaign->frequency_type == 1) || ($campaign->frequency_type == 1) ) : ?>
+                        <br />
+                        Your donation will reoccur <?php echo $campaign->campaign ? $campaign->campaign->frequency_period_label : $campaign->frequency_period_label ?>
+                      <?php elseif( ($campaign->campaign && $campaign->campaign->frequency_type == 2) || ($campaign->frequency_type == 2) ) : ?>
+                          <label>
+                            <input type="checkbox" name="allow_recurring" value="1" />
+                            Make my donation reoccur <?php echo $campaign->campaign ? $campaign->campaign->frequency_period_label : $campaign->frequency_period_label ?>
+                          </label>
+                      <?php endif ?>
                     </li>
                   </ul>
                 </div>
@@ -90,6 +99,7 @@
               </div>
           </div>
           <div class="small-12 medium-6 columns">
+
             <div class="box">
               <h4>Credit Card</h4>
 

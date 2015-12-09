@@ -43,6 +43,31 @@
 
                     <dt>Campaign Status</dt>
                     <dd><?php echo $campaign->status ? 'Open' : 'Closed' ?></dd>
+
+                    <dt>Donation Frequency</dt>
+                    <dd>
+                        <?php if( !$campaign->frequency_type || $campaign->frequency_type == 'onetime' ) : ?>
+                            Only one time
+                        <?php elseif( $campaign->frequency_type == 'recurring' ) : ?>
+                            Only recurring
+                        <?php else : ?>
+                            Decide at checkout
+                        <?php endif ?>
+                    </dd>
+                    <?php if( $campaign->frequency_type && $campaign->frequency_type != 'onetime' ) : ?>
+                        <dt>Frequency Interval</dt>
+                        <dd>
+                            <?php if( $campaign->frequency_period == 'monthly' ) : ?>
+                                Monthly
+                            <?php elseif( $campaign->frequency_period == 'quarterly' ) : ?>
+                                Every 3 months
+                            <?php elseif( $campaign->frequency_period == 'biyearly' ) : ?>
+                                Every 6 months
+                            <?php else : ?>
+                                Yearly
+                            <?php endif ?>
+                        </dd>
+                    <?php endif ?>
                 </dl>
 
             </div>

@@ -115,6 +115,8 @@ class Campaigns extends CI_Controller {
             $campaign->description    = $this->input->post('description');
             $campaign->status         = $this->input->post('status') ? true : false;
             $campaign->has_giving_opportunities = $this->input->post('type') ? true : false;
+            $campaign->frequency_type   = $this->input->post('frequency') ? $this->input->post('frequency') : 0;
+            $campaign->frequency_period = $this->input->post('interval') ? $this->input->post('interval') : 0;
 
             // campaign levels
             if( $this->input->post('levels') ) {

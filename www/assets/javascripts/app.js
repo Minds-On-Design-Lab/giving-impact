@@ -461,6 +461,23 @@ $(document).foundation();
     	});
     });
 
+    $(function() {
+        if( $('[name="frequency"]').length == 0 || $('[name="interval"]').length == 0 ) {
+            return;
+        }
+        if( $('[name="frequency"]').val() == 'onetime' || !$('[name="frequency"]').val() ) {
+            $('[name="interval"]').parents('.row').first().css('display', 'none');
+        }
+
+        $('[name="frequency"]').on('change', function(e) {
+            if( $(this).val() && $(this).val() != 'onetime' ) {
+                $('[name="interval"]').parents('.row').first().css('display', 'block');
+            } else {
+                $('[name="interval"]').parents('.row').first().css('display', 'none');
+            }
+        });
+    });
+
 })(jQuery);
 
 logshare = function(t,u) {
