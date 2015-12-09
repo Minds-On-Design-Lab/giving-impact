@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-define('_GI_VER', '3.0.0');
+define('_GI_VER', '3.0.0/recurring-donations');
 
 /*
 |--------------------------------------------------------------------------
