@@ -58,6 +58,7 @@ $route['diagnostics']           = 'diagnostics';
 
 $route['(initiate_donation|donate)/(:any)/(checkout|complete|process|contact)'] = 'donate/$3';
 $route['(initiate_donation|donate)/(:any)'] = 'donate/index';
+$route['donation/(:any)'] = 'manage_donation/index';
 
 $route['campaigns/(:any)/opportunities(/:num)?']        = "opportunities/index";
 $route['campaigns/(:any)/opportunities/(:any)/donations.csv'] = "opportunities/export";
