@@ -436,6 +436,10 @@ class Donate extends CI_Controller {
                 $plan->stripe_plan_id = $planName;
                 $plan->save_entry();
 
+                $this->db
+                    ->where('id', $donation_id)
+                    ->update('donations', array('plan_id' => $plan->id));
+
                 $stripe_plan = Stripe_Plan::create(
                     array(
                         "amount"    => $total,

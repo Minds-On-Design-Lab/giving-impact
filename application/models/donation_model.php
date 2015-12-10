@@ -33,6 +33,7 @@ class Donation_model extends GI_Model {
 	public $complete = false;
 	public $stripe_charge_id = null;
 	public $refunded = 0;
+	public $plan_id = 0;
 
 	public function __construct() {
 		parent::__construct();
@@ -136,6 +137,19 @@ class Donation_model extends GI_Model {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Plan computed property
+	 * @return Object recurring plan
+	 */
+	public function __plan() {
+		if (!$this->plan_id) {
+			return false;
+		}
+
+		return $this->Plan_model
+			->get_entry($this->plan_id);
 	}
 
 	/**

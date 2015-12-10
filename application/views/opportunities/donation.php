@@ -58,6 +58,11 @@
                         <?php endif ?>
                     </dd>
 
+                    <?php if ($donation->plan && $donation->plan->id) : ?>
+                        <dt>Recurring Donation</dt>
+                        <dd><a href="<?php echo $donation->plan->stripe_url ?>" target="_blank">View plan on Stripe</a></dd>
+                    <?php endif ?>
+
                     <?php if( $campaign->custom_fields ) : ?>
                         <?php foreach( $donation->custom_responses as $field ) : ?>
                             <?php if( !$field->status ) : continue; endif ; ?>

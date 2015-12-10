@@ -31,6 +31,7 @@ class Donation_model extends GI_Model {
 	public $stripe_charge_id = false;
 	public $supporter_id = null;
 	public $refunded = 0;
+	public $plan_id = false;
 
 	private $_custom_responses = false;
 
@@ -40,6 +41,7 @@ class Donation_model extends GI_Model {
 		$this->load->model('Campaign_model');
 		$this->load->model('Opportunity_model');
 		$this->load->model('Supporter_model');
+		$this->load->model('Plan_model');
 	}
 
 	/**
@@ -158,6 +160,19 @@ class Donation_model extends GI_Model {
 		}
 
 		return false;
+	}
+
+	/**
+	 * Plan computed property
+	 * @return Object recurring plan
+	 */
+	public function __plan() {
+		if (!$this->plan_id) {
+			return false;
+		}
+
+		return $this->Plan_model
+			->get_entry($this->plan_id);
 	}
 
 	/**

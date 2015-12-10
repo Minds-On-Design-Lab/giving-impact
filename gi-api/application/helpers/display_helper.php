@@ -317,6 +317,22 @@ function prep_donations($rows, $recurse = true) {
 			$item['supporter'] = array_shift(prep_supporters($row->__supporter()));
 		}
 
+		if ($row->plan_id) {
+			$p = array();
+			$p['id'] 						= $row->plan_id;
+			$p['stripe_plan_id'] 			= $row->plan->stripe_plan_id;
+			$p['stripe_subscription_id']	= $row->plan->stripe_subscription_id;
+			$p['currency'] 					= $row->plan->currency;
+			$p['frequency_type'] 			= $row->plan->frequency_type;
+			$p['frequency_period'] 			= $row->plan->frequency_period;
+			$p['token'] 					= $row->plan->plan_token;
+			$p['stripe_url']				= $row->plan->stripe_url;
+
+			$item['plan'] = $p;
+		} else {
+			$item['plan'] = array();
+		}
+
 		$out[] = $item;
 	}
 

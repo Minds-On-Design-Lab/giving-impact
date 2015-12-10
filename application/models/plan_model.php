@@ -52,4 +52,17 @@ class Plan_model extends GI_Model {
 		return $this;
 	}
 
+    /**
+     * Stripe plan URL computed property
+     * @return string
+     */
+    public function __stripe_url() {
+        $t = '';
+        if (strpos($this->config->item('stripe_secret_key'), 'test') !== false) {
+            $t = 'test/';
+        }
+
+        return 'https://dashboard.stripe.com/'.$t.'plans/tt'.$this->id;
+    }
+
 }

@@ -33,6 +33,7 @@
                         <tr>
                             <th>Date</th>
                             <th>Name</th>
+                            <th>Recurring</th>
                             <th>Total</th>
                             <th>Offline</th>
                         </tr>
@@ -41,9 +42,10 @@
                         <?php foreach( $donations as $donation ) : ?>
                             <tr>
                                 <td class="width20"><a href="<?php echo site_url('campaigns/'.$campaign->id_token.'/opportunities/'.$opportunity->id_token.'/donations/'.$donation->id_token) ?>"><?php echo format_date($donation->donation_date, 'm/d/Y') ?></a></td>
-                                <td class="width30"><?php echo $donation->first_name.' '.$donation->last_name ?></td>
+                                <td class="width25"><?php echo $donation->first_name.' '.$donation->last_name ?></td>
+                                <td class="width10"><?php if ($donation->plan && $donation->plan->id) : ?><i class="fa fa-check action"></i><?php endif ?></td>
                                 <td class="width15"><?php if( $donation->refunded ) : ?><strike><?php endif ?><?php echo money_format('%n', $donation->donation_total/100) ?><?php if( $donation->refunded ) : ?></strike><?php endif ?></td>
-                                <td class="width20"><?php if( $donation->offline ) : ?><i class="icon general foundicon-checkmark"></i><?php endif ?></td>
+                                <td class="width15"><?php if( $donation->offline ) : ?><i class="icon general foundicon-checkmark"></i><?php endif ?></td>
                             </tr>
                         <?php endforeach ?>
                     </tbody>
