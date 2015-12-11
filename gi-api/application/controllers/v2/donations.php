@@ -278,27 +278,8 @@ class Donations extends CI_Controller {
 
         $donation->account_id = $this->authorization->account;
 
-        try {
-            if( property_exists($this->input->post_body, 'card') && $this->input->post_body->card ) {
-
-                $charge = Stripe_Charge::create(
-                    array(
-                        'amount'    => $donation->amount * 100,
-                        'currency'  => $this->authorization->get_account()->currency,
-                        'card'      => $this->input->post_body->card,
-                        'description' => $donation->email_address
-                    ),
-                    $this->config->item('stripe_secret_key')
-                );
-
-                $donation->complete = 1;
-                $donation->stripe_charge_id = $charge->id;
-                $donation->offline = false;
-            }
-        } catch( Exception $e ) {
-            $this->log->entry('Could not process card: '.$e->getMessage());
-            $this->output->show_error($e->getMessage(), 404, 'processing_error');
-            return;
+        if (!$donation->donation_token) {
+            $donation->donation_token = api_generate_token();
         }
 
         // update supporter model
@@ -322,6 +303,102 @@ class Donations extends CI_Controller {
             $supporter->save_entry();
         } else {
             $supporter = $supporter[0];
+        }
+
+        $planName = $acct->account_name;
+        $planName .= ' '.($opportunity ? $opportunity->title : $campaign->title);
+        $planName .= ' '.$donation->donation_token;
+
+        if( property_exists($this->input->post_body, 'card') && $this->input->post_body->card &&
+            (($this->input->post_body->allow_recurring && $campaign->frequency_type == 2) || $campaign->frequency_type == 1)
+        ) {
+            $interval = false;
+            $period = false;
+            switch($campaign->frequency_period) {
+                case 12:
+                    $interval = 'year';
+                    $period = 1;
+                    break;
+                case 6:
+                    $interval = 'month';
+                    $period = 6;
+                    break;
+                case 3:
+                    $interval = 'month';
+                    $period = 3;
+                case 1:
+                default:
+                    $interval = 'month';
+                    $period = 1;
+                    break;
+            }
+
+            try {
+                $plan = new Plan_model;
+                $plan->account_id   = $acct->id;
+                $plan->currency     = $acct->currency;
+                $plan->donation_total = $donation->amount;
+                $plan->stripe_plan_id = $planName;
+                $plan->save_entry();
+
+                $donation->plan_id = $plan->id;
+                $donation->save_entry();
+
+                $stripe_plan = Stripe_Plan::create(
+                    array(
+                        "amount"    => $donation->amount,
+                        "currency"  => $acct->currency,
+                        "name"      => $planName,
+                        "id"        => 'tt'.$plan->id,
+                        "interval"  => $interval,
+                        "interval_count" => $period,
+                        "metadata"  => array(
+                            "donation" => $donation->id,
+                            "campaign" => $campaign->id,
+                            "opportunity"=> $opportunity ? $opportunity->id : ''
+                        )
+                    ),
+                    $this->config->item('stripe_secret_key')
+                );
+
+                $stripe_cust = Stripe_Customer::create(
+                    array(
+                        "description"       => $supporter->first_name.' '.$supporter->last_name.' ('.$supporter->email_address.')',
+                        "plan"              => $stripe_plan->id,
+                        "source"            => $card
+                    ),
+                    $this->config->item('stripe_secret_key')
+                );
+            } catch( Exception $e ) {
+                return $this->checkout($e->getMessage());
+            }
+
+            $donation->complete = 1;
+            $donation->stripe_charge_id = $stripe_cust->id;
+
+        } else {
+            try {
+                if( property_exists($this->input->post_body, 'card') && $this->input->post_body->card ) {
+
+                    $charge = Stripe_Charge::create(
+                        array(
+                            'amount'    => $donation->amount * 100,
+                            'currency'  => $this->authorization->get_account()->currency,
+                            'card'      => $this->input->post_body->card,
+                            'description' => $donation->email_address
+                        ),
+                        $this->config->item('stripe_secret_key')
+                    );
+
+                    $donation->complete = 1;
+                    $donation->stripe_charge_id = $charge->id;
+                    $donation->offline = false;
+                }
+            } catch( Exception $e ) {
+                $this->log->entry('Could not process card: '.$e->getMessage());
+                $this->output->show_error($e->getMessage(), 404, 'processing_error');
+                return;
+            }
         }
 
         $donation->supporter_id = $supporter->id;
