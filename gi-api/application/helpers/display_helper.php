@@ -333,6 +333,8 @@ function prep_donations($rows, $recurse = true) {
 			$item['plan'] = array();
 		}
 
+		$item['canceled'] = $row->canceled ? true : false;
+
 		$out[] = $item;
 	}
 

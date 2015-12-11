@@ -34,6 +34,7 @@ class Donation_model extends GI_Model {
 	public $stripe_charge_id = null;
 	public $refunded = 0;
 	public $plan_id = 0;
+	public $canceled = 0;
 
 	public function __construct() {
 		parent::__construct();

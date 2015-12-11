@@ -45,6 +45,7 @@ class AddFrequencyTypes extends AbstractMigration
         $this->execute('alter table campaigns add column frequency_type tinyint(1) default 0');
         $this->execute('alter table campaigns add column frequency_period tinyint(2) default 0');
         $this->execute('alter table donations add column plan_id int(11) default 0');
+        $this->execute('alter table donations add column canceled tinyint(1) default 0');
 
     }
 }

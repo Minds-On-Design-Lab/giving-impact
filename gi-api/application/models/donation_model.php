@@ -32,6 +32,7 @@ class Donation_model extends GI_Model {
 	public $supporter_id = null;
 	public $refunded = 0;
 	public $plan_id = false;
+	public $canceled = 0;
 
 	private $_custom_responses = false;
 
