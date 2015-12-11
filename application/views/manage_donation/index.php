@@ -18,7 +18,8 @@
 
     <div class="checkout-start">
 
-      <form method="post" action="<?php echo site_url('donation/'.$hash) ?>?utm_source=<?php echo $this->input->get('utm_source') ? $this->input->get('utm_source') : 'direct' ?>&utm_medium=<?php echo $this->input->get('utm_medium') ? $this->input->get('utm_medium') : 'link' ?>&utm_campaign=<?php echo $campaign->campaign ? $campaign->campaign->title : $campaign->title ?>" id="form-donation-checkout">
+      <form method="post" action="<?php echo site_url('donation/'.$hash) ?>?utm_source=<?php echo $this->input->get('utm_source') ? $this->input->get('utm_source') : 'direct' ?>&utm_medium=<?php echo $this->input->get('utm_medium') ? $this->input->get('utm_medium') : 'link' ?>&utm_campaign=<?php echo $campaign->campaign ? $campaign->campaign->title : $campaign->title ?>" id="form-donation-manage">
+        <input type="hidden" name="d" value="<?php echo $hash ?>" />
         <div class="row">
           <div class="small-12 medium-6 columns">
               <div class="box">

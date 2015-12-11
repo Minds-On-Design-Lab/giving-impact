@@ -60,7 +60,11 @@
 
                     <?php if ($donation->plan && $donation->plan->id) : ?>
                         <dt>Recurring Donation</dt>
-                        <dd><a href="<?php echo $donation->plan->stripe_url ?>" target="_blank">View plan on Stripe</a></dd>
+                        <?php if ($donation->canceled) : ?>
+                            <dd>This subscription has been canceled</dd>
+                        <?php else : ?>
+                            <dd><a href="<?php echo $donation->plan->stripe_url ?>" target="_blank">View plan on Stripe</a></dd>
+                        <?php endif ?>
                     <?php endif ?>
 
                     <?php if( $campaign->custom_fields ) : ?>
