@@ -305,7 +305,7 @@ class Donations extends CI_Controller {
             $supporter = $supporter[0];
         }
 
-        $planName = $acct->account_name;
+        $planName = $acct[0]->account_name;
         $planName .= ' '.($opportunity ? $opportunity->title : $campaign->title);
         $planName .= ' '.$donation->donation_token;
 
@@ -335,8 +335,8 @@ class Donations extends CI_Controller {
 
             try {
                 $plan = new Plan_model;
-                $plan->account_id   = $acct->id;
-                $plan->currency     = $acct->currency;
+                $plan->account_id   = $acct[0]->id;
+                $plan->currency     = $acct[0]->currency;
                 $plan->donation_total = $donation->amount;
                 $plan->stripe_plan_id = $planName;
                 $plan->save_entry();
@@ -347,7 +347,7 @@ class Donations extends CI_Controller {
                 $stripe_plan = Stripe_Plan::create(
                     array(
                         "amount"    => $donation->amount,
-                        "currency"  => $acct->currency,
+                        "currency"  => $acct[0]->currency,
                         "name"      => $planName,
                         "id"        => 'tt'.$plan->id,
                         "interval"  => $interval,
@@ -361,11 +361,11 @@ class Donations extends CI_Controller {
                     $this->config->item('stripe_secret_key')
                 );
 
-                $stripe_cust = Stripe_Customer::create(
+                $charge = Stripe_Customer::create(
                     array(
                         "description"       => $supporter->first_name.' '.$supporter->last_name.' ('.$supporter->email_address.')',
                         "plan"              => $stripe_plan->id,
-                        "source"            => $card
+                        "source"            => $this->input->post_body->card
                     ),
                     $this->config->item('stripe_secret_key')
                 );
@@ -374,7 +374,8 @@ class Donations extends CI_Controller {
             }
 
             $donation->complete = 1;
-            $donation->stripe_charge_id = $stripe_cust->id;
+            $donation->offline = false;
+            $donation->stripe_charge_id = $charge->id;
 
         } else {
             try {
