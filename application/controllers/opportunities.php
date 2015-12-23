@@ -1,5 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+require_once(APPPATH.'/libraries/stripe/Stripe.php');
+
 /**
  * Opportunities controller
  *
@@ -19,6 +21,7 @@ class Opportunities extends CI_Controller {
         $this->load->helper('file');
         $this->load->helper('export');
         $this->load->helper('typography');
+        $this->load->helper('notification');
 
         $this->load->model('Transaction_model');
         $this->load->model('Campaign_model');
@@ -678,6 +681,129 @@ class Opportunities extends CI_Controller {
             'donation' => $donation
         ));
     }
+
+    /**
+     * Cancel handler
+     */
+    public function donation_cancel() {
+        if( !$this->uri->segment(2) ) {
+            show_error('Campaign token is required');
+            return;
+        }
+
+        $donation = $this->Donation_model
+            ->where('donation_token', $this->uri->segment(6))
+            ->limit(1)
+            ->find();
+
+        if (count($donation)) {
+            $donation = $donation[0];
+        } else {
+            show_error('Donation not found');
+            return;
+        }
+
+        $campaign = $this->giving_impact
+            ->campaign
+            ->fetch($this->uri->segment(2));
+
+        $opportunity = $donation->opportunity;
+
+        $account = $this->Account_model
+            ->where('id', 1)
+            ->find();
+
+        if ($this->input->post('d')) {
+            $cust = Stripe_Customer::retrieve(
+                $donation->stripe_charge_id,
+                $this->config->item('stripe_secret_key')
+            );
+
+            $subs = $cust->subscriptions->all(array('limit' => 100));
+
+            if (!$subs->data) {
+                show_error('Unable to find subscription');
+                return;
+            }
+
+            $stripe_subscription = false;
+            foreach ($subs->data as $sub) {
+                if ($sub->plan->id == 'tt'.$donation->plan_id) {
+                    $stripe_subscription = $sub;
+                }
+            }
+
+            if ($stripe_subscription === false) {
+                show_error('Unable to find subscription for plan');
+                return;
+            }
+
+            $stripe_plan = Stripe_Plan::retrieve(
+                'tt'.$donation->plan_id,
+                $this->config->item('stripe_secret_key')
+            );
+
+            if (!$stripe_plan) {
+                show_error('Unable to load stripe plan');
+                return;
+            }
+
+            //
+            // TODO: Change this to client lib method upon upgrade
+            //
+            // subscription::cancel is, unfortunately, not in this library version
+            $url = 'https://api.stripe.com/v1/customers/'.$donation->stripe_charge_id.'/subscriptions/'.$stripe_subscription->id;
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+            curl_setopt($ch, CURLOPT_USERPWD, $this->config->item('stripe_secret_key'));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $result = curl_exec($ch);
+            $result = json_decode($result);
+            curl_close($ch);
+
+            if ($result && $result->error) {
+                show_error($result->error->message);
+                return;
+            }
+            //
+            // END hacky hacktown
+            //
+
+            // if (!$stripe_subscription->cancel()) {
+            //     show_error('There was a problem canceling your subscription');
+            //     return;
+            // }
+
+            if (!$stripe_plan->delete()) {
+                show_error('There was a problem removing your plan');
+                return;
+            }
+
+            $txn = new Transaction_model;
+            $txn->donation_id         = $donation->id;
+            $txn->type                = 'subscription_canceled';
+            $txn->amount              = 0;
+            $txn->stripe_id           = '';
+            $txn->save_entry();
+
+            $this->db->update(
+                'donations', array('canceled' => 1), array('id' => $donation->id)
+            );
+
+            $obj = $opportunity;
+            if (!$obj) {
+                $obj = $campaign;
+            }
+            notify_subscription_canceled($donation, $obj, $account[0]);
+
+            $this->session->set_flashdata('message', 'Donation canceled.');
+        }
+
+        redirect(site_url('campaigns/'.$campaign->id_token.'/opportunities/'.$opportunity->campaign_token.'/donations'), 'header');
+        return;
+    }
+
 
     /**
      * Refund handler

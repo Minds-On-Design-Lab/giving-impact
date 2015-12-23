@@ -59,13 +59,14 @@ $route['diagnostics']           = 'diagnostics';
 $route['(initiate_donation|donate)/(:any)/(checkout|complete|process|contact)'] = 'donate/$3';
 $route['(initiate_donation|donate)/(:any)'] = 'donate/index';
 
-$route['donation/(:any)/complete'] = 'manage_donation/complete';
-$route['donation/(:any)'] = 'manage_donation/index';
+// $route['donation/(:any)/complete'] = 'manage_donation/complete';
+// $route['donation/(:any)'] = 'manage_donation/index';
 
 $route['campaigns/(:any)/opportunities(/:num)?']        = "opportunities/index";
 $route['campaigns/(:any)/opportunities/(:any)/donations.csv'] = "opportunities/export";
 $route['campaigns/(:any)/opportunities/(:any)/donations/(:num)'] = "opportunities/donations";
 $route['campaigns/(:any)/opportunities/(:any)/donations/(:any)/edit'] = "opportunities/donation_edit";
+$route['campaigns/(:any)/opportunities/(:any)/donations/(:any)/cancel'] = "opportunities/donation_cancel";
 $route['campaigns/(:any)/opportunities/(:any)/donations/(:any)/refund'] = "opportunities/donation_refund";
 $route['campaigns/(:any)/opportunities/(:any)/donations/new'] = "opportunities/donation_edit";
 $route['campaigns/(:any)/opportunities/(:any)/donations/(:any)'] = "opportunities/donation";
@@ -84,6 +85,7 @@ $route['campaigns/(:any)/donations.csv'] = "campaigns/export";
 $route['campaigns/(:any)/donations/new'] = "campaigns/donation_edit";
 $route['campaigns/(:any)/donations/(:num)'] = "campaigns/donations";
 $route['campaigns/(:any)/donations/(:any)/edit'] = "campaigns/donation_edit";
+$route['campaigns/(:any)/donations/(:any)/cancel'] = "campaigns/donation_cancel";
 $route['campaigns/(:any)/donations/(:any)/refund'] = "campaigns/donation_refund";
 $route['campaigns/(:any)/donations/(:any)'] = "campaigns/donation";
 $route['campaigns/(:any)/(:any)/(:num)'] = "campaigns/$2";

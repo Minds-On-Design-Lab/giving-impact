@@ -12,6 +12,9 @@ class Manage_donation extends CI_Controller {
     public function __construct() {
         parent::__construct();
 
+        show_error('This controller is not enabled');
+        return;
+
         $this->load->library('giving_impact');
         $this->load->library('form_validation');
 

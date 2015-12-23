@@ -63,7 +63,14 @@
                         <?php if ($donation->canceled) : ?>
                             <dd>This subscription has been canceled</dd>
                         <?php else : ?>
-                            <dd><a href="<?php echo $donation->plan->stripe_url ?>" target="_blank">View plan on Stripe</a></dd>
+                            <dd>
+                                <a href="<?php echo $donation->plan->stripe_url ?>" target="_blank">View plan on Stripe</a>
+                                <hr />
+                                <form method="post" action="<?php echo site_url('campaigns/'.$campaign->id_token.'/donations/'.$donation->id_token.'/cancel') ?>">
+                                    <input type="hidden" name="d" value="1" />
+                                    <input type="submit" class="gi-button" value="Cancel Recurring Donation" />
+                                </form>
+                            </dd>
                         <?php endif ?>
                     <?php endif ?>
 
