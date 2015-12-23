@@ -178,7 +178,11 @@ function prep_campaigns($rows, $recurse = true) {
 
 		}
 
-		switch($row->frequency_type) {
+		$obj = $row;
+		if (property_exists($row, 'campaign_id') && $row->id != $row->campaign_id) {
+			$obj = $row->opportunity;
+		}
+		switch($obj->frequency_type) {
 			case 1:
 				$item['frequency_type'] = 'recurring';
 				break;
@@ -191,7 +195,7 @@ function prep_campaigns($rows, $recurse = true) {
 				break;
 		}
 
-		switch($row->frequency_period) {
+		switch($obj->frequency_period) {
 			case 1:
 				$item['frequency_period'] = 'monthly';
 				break;

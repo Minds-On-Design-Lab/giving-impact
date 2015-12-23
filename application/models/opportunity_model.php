@@ -99,6 +99,13 @@ class Opportunity_model extends GI_Model {
 		return $this->_myparent;
 	}
 
+    public function __frequency_type() {
+    	return $this->__campaign()->frequency_type;
+    }
+    public function __frequency_period() {
+    	return $this->__campaign()->frequency_period;
+    }
+
 	/**
 	 * Custom fields computed property, returns parent campaign fields
 	 * @return Array
